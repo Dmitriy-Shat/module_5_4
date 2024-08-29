@@ -1,7 +1,7 @@
 class House:
     house_history = []
 
-    def __new__(cls, *args, **kwargs):
+    def __new__(cls, *args):
         cls.house_history.append(args[0])
         return cls.house_history
 
@@ -10,7 +10,7 @@ class House:
         self.number_of_floors = number
 
     #def __del__(self):                                                # совместно c __new__ не работает
-        #print(f'{self.name}, дом снесен, но он останется в истории')
+        #print(f'{self.name}, дом снесен, но он останется в истории')  # почему так не понятно
 
 
 Korp1 = House('Волга', 15)
